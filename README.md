@@ -1,9 +1,9 @@
 # Api-quark-up
 Api Quark Up Version 1.0.0
 
-# Quark Up 1.0.0
+## Quark Up 1.0.0
 
-![quark up {w=30%}](Images/circle-solid.png)
+![quark up {w=30%}](images/circle-solid.png)
 
 # Instructions
 
