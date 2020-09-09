@@ -11,11 +11,11 @@
 // Constant
 const copyright = `<!-- Footer -->
                     <footer class="page-footer font-small">
-                    <!-- Copyright -->
-                    <div class="footer-copyright bg-dark text-center text-secondary py-3">
-                        © 2020 Copyright: Konektron APIs.
+                    <!-- GPL 3.0 -->
+                    <div class="footer-copyright bg-primary text-center text-white py-3">
+                        <i class="far fa-file-alt"></i> 2020 GPL 3.0: Konektron APIs.
                     </div>
-                    <!-- Copyright -->
+                    <!-- GPL 3.0 -->
                     </footer>
                 <!-- Footer -->`;
 

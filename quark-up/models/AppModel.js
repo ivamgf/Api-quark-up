@@ -11,6 +11,7 @@ var navbar = require('../public/javascripts/header').navbar;
 var footer = require('../public/javascripts/footer').footer;
 var homepage = require('../public/javascripts/home').homepage;
 var documentation = require('../public/javascripts/documentation').documentation;
+var contacts = require('../public/javascripts/contacts').contacts;
 var controller = require('../controllers/AppController').controller;
 
 // Constant
@@ -22,6 +23,7 @@ const model = {
                 footer: footer.foot,
                 home: homepage.home,
                 doc: documentation.doc,
+                cont: contacts.cont,
                 service: controller.script
             };
 

@@ -12,7 +12,10 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
+var watch = require('node-watch');
+var hostname = '127.0.0.1';
 var port = normalizePort(process.env.PORT || '3000');
+const open = require('open');
 app.set('port', port);
 
 /**
@@ -25,7 +28,16 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port, hostname, open, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+  // opens the url in the default browser 
+  (async () => {
+    await open(`http://${hostname}:${port}/`);
+    watch('./views/', { recursive: true }, function(evt, name) {
+      console.log('%s changed.', name);
+    });
+  })();  
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
