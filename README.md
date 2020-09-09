@@ -12,6 +12,10 @@ $ npm init
 ``
 
 ``
+$ npm install
+``
+
+``
 $ npm install express --save
 ``
 
@@ -37,6 +41,14 @@ $ npm install mongoose-paginate
 
 ``
 $ npm install cors
+``
+
+``
+$ npm install node-watch
+``
+
+``
+$ npm install http
 ``
 ## Options
 ``
