@@ -50,6 +50,10 @@ $ npm install node-watch
 ``
 $ npm install http
 ``
+
+``
+$ npm install open
+``
 ## Options
 ``
 
