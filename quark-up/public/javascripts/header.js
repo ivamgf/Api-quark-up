@@ -26,11 +26,8 @@ const head = `<nav class="navbar navbar-expand-md bg-dark navbar-dark shadow p-4
                 <a class="nav-link" href="/doc"><i class="fas fa-book"></i> Documentation</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/metadatadc"><i class="fas fa-file-alt"></i> Metadados DC</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/metadatalom"><i class="fas fa-file-alt"></i> Metadados IEEE LOM</a>
-                </li>
+                <a class="nav-link" href="/metadatadc"><i class="fas fa-envelope"></i> Contacts</a>
+                </li>                
             </ul>
             </div>
             </nav>`;

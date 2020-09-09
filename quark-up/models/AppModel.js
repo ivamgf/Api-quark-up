@@ -15,9 +15,9 @@ var controller = require('../controllers/AppController').controller;
 
 // Constant
 const model = { 
-                title: 'Framework-Konektron-LOs V1.1.0',
-                description: 'Framework for development and design of learning objects',
-                version: '1.1.0',
+                title: 'API Quark Up V1.0.0',
+                description: 'API for development and design of Application',
+                version: '1.0.0',
                 header: navbar.nav,
                 footer: footer.foot,
                 home: homepage.home,

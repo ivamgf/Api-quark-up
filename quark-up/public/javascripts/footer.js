@@ -13,7 +13,7 @@ const copyright = `<!-- Footer -->
                     <footer class="page-footer font-small">
                     <!-- Copyright -->
                     <div class="footer-copyright bg-dark text-center text-secondary py-3">
-                        © 2020 Copyright: Konektron LOs.
+                        © 2020 Copyright: Konektron APIs.
                     </div>
                     <!-- Copyright -->
                     </footer>
