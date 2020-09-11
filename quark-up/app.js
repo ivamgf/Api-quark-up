@@ -14,7 +14,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const cors = require('cors');
+const mongoose = require('mongoose');
+// const requireDir = require('require-dir');
 var app = express();
+
 // Constant
 
 // Functions
@@ -28,6 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use(cors( ));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,4 +50,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// Starting the Database
+// Warning: Verify Network Access: IP Access List in MongoDB Atlas.
+mongoose.connect(
+  'mongodb+srv://ivamgf:10106088@cluster0.diple.mongodb.net/db_module_test?retryWrites=true&w=majority', {
+    useNewUrlParser: true
+  });
+require('./models/UsersModel');
+
+// Exports
 module.exports = app;
