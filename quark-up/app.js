@@ -12,11 +12,21 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
+
+// Starting the Database
+// Warning: Verify Network Access: IP Access List in MongoDB Atlas.
+mongoose.connect(
+  'mongodb+srv://ivamgf:10106088@cluster0.diple.mongodb.net/db_module_test?retryWrites=true&w=majority', {
+    useNewUrlParser: true, useUnifiedTopology: true
+  });
+require('./models/UsersModel');
+// Starting the Database
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const cors = require('cors');
-const mongoose = require('mongoose');
+var cors = require('cors');
+
 var app = express();
 
 // view engine setup
@@ -48,14 +58,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-// Starting the Database
-// Warning: Verify Network Access: IP Access List in MongoDB Atlas.
-mongoose.connect(
-  'mongodb+srv://ivamgf:10106088@cluster0.diple.mongodb.net/db_module_test?retryWrites=true&w=majority', {
-    useNewUrlParser: true, useUnifiedTopology: true
-  });
-require('./models/UsersModel');
 
 // Exports
 module.exports = app;

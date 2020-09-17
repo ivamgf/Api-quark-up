@@ -10,6 +10,7 @@
 var express = require('express');
 var router = express.Router();
 var model = require('../models/AppModel').model;
+var UsersController = require('../controllers/UsersController');
 
 // Constant
 
@@ -30,6 +31,8 @@ router.get('/doc', function(req, res, next) {
 router.get('/cont', function(req, res, next) {
   res.render('contacts', model);
 });
+/* Get Users */
+router.get('/queryUser', UsersController.index);
 
 // Exports
 module.exports = router;

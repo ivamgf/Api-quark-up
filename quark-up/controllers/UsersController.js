@@ -16,14 +16,14 @@ const Users = mongoose.model('UsersModel');
 // Exports
 module.exports = {
     // Function Index
-    /*
+    
 	async index(req, res) {
 		const { page = 1 } = req.query;
-	const users = await Users.paginate({}, { page, limit: 10 });
+	const queryUsers = await Users.paginate({}, { page, limit: 10 });
 
-	return res.json(users);
+	return res.json(queryUsers);
     },
-*/
+
     // CRUD
 /*
     // Get Function
