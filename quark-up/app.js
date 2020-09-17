@@ -53,7 +53,7 @@ app.use(function(err, req, res, next) {
 // Warning: Verify Network Access: IP Access List in MongoDB Atlas.
 mongoose.connect(
   'mongodb+srv://ivamgf:10106088@cluster0.diple.mongodb.net/db_module_test?retryWrites=true&w=majority', {
-    useNewUrlParser: true
+    useNewUrlParser: true, useUnifiedTopology: true
   });
 require('./models/UsersModel');
 
