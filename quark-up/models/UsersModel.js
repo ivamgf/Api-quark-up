@@ -42,7 +42,6 @@ const UsersSchema = new mongoose.Schema({
 });
 
 // Functions
-
 UsersSchema.plugin(mongoosePaginate);
 
 // Exports
