@@ -18,52 +18,86 @@ module.exports = {
     // Function Index
     
 	async index(req, res) {
-		const { page = 1 } = req.query;
-	const info = await Users.paginate({}, { page, limit: 10 });
-
-	return res.json(info);
+        try{
+            const { page = 1 } = req.query;
+            const info = await Users.paginate({},{ page, limit: 10 });
+            return res.json(info);
+        }
+        catch (error) {
+            // response error
+            console.log("Ocorreu um erro, sua conexão não foi realizada!");
+        }		
     },
 
     // CRUD
     // Get Function
     async show(req, res) {
         // Consulta
-        const queryUsers = await Users.find();
+        try{
+            const queryUsers = await Users.find();
 
-        return res.json(queryUsers);
+            return res.json(queryUsers);
+        }
+        catch (error) {
+            // response error
+            console.log("Ocorreu um erro, sua conexão não foi realizada!");
+        }        
     },
    
     // Get Function
     async showUser(req, res) {
         // Consulta
-        const queryUser = await Users.findById(req.params.id);
+        try{
+            const queryUser = await Users.findById(req.params.id);
 
-        return res.json(queryUser);
+            return res.json(queryUser);
+        }
+        catch (error) {
+            // response error
+            console.log("Ocorreu um erro, sua conexão não foi realizada!");
+        }        
     },
 
     // Post Function
     async registerUser(req,res) {
         // Registro
-        const regUsers = await Users.create(req.body);
+        try{
+            const regUsers = await Users.create(req.body);
 
-        return res.json(regUsers);
+            return res.json(regUsers);
+        }
+        catch (error) {
+            // response error
+            console.log("Ocorreu um erro, sua conexão não foi realizada!");
+        }        
     },
 
     // Put Function
     async updateUser(req,res) {
         // Update
-        const upUsers = await Users.findByIdAndUpdate(req.params.id, req.body,
-    { new: true });
+        try{
+            const upUsers = await Users.findByIdAndUpdate(req.params.id, req.body,
+            { new: true });
 
-        return res.json(upUsers);
+            return res.json(upUsers);
+        }
+        catch (error) {
+            // response error
+            console.log("Ocorreu um erro, sua conexão não foi realizada!");
+        }        
     },
 
     // Delete Function
     async destroyUser(req,res) {
         // Delete
-        await deleteUsers.findByIdAndRemove(req.params.id);
+        try{
+            await deleteUsers.findByIdAndRemove(req.params.id);
 
-        return res.send();
+            return res.send();
+        }
+        catch (error) {
+            // response error
+            console.log("Ocorreu um erro, sua conexão não foi realizada!");
+        }        
     }
-
 };
