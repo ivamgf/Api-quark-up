@@ -10,6 +10,7 @@
 var express = require('express');
 var router = express.Router();
 var model = require('../models/AppModel').model;
+var UsersController = require('../controllers/UsersController');
 
 // Constant
 
@@ -30,6 +31,23 @@ router.get('/doc', function(req, res, next) {
 router.get('/cont', function(req, res, next) {
   res.render('contacts', model);
 });
+/* Get Info */
+router.get('/info', UsersController.index);
+
+/* Get Users */
+router.get('/queryUsers', UsersController.show);
+
+/* Get User by id */
+router.get('/queryUser/:id', UsersController.showUser);
+
+/* Post User by id */
+router.post('/regUsers', UsersController.registerUser);
+
+/* Put User by id */
+router.put('/upUsers/:id', UsersController.updateUser);
+
+/* delete User by id */
+router.put('/deleteUsers/:id', UsersController.destroyUser);
 
 // Exports
 module.exports = router;
