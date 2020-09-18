@@ -20,21 +20,19 @@ const UsersSchema = new mongoose.Schema({
 	name: {
 		type: String,
         required: true,
-	},
-	contacts: [{
-		telephone: {
-            type: String,
-            required: false,
-        },
-        email: {
-            type: String,
-            required: false,
-        },
-        whats: {
-            type: String,
-            required: false,
-        },
-    }],
+    },
+    telephone: {
+        type: String,
+        required: false,
+    },
+    email: {
+        type: String,
+        required: false,
+    },
+    whats: {
+        type: String,
+        required: false,
+    },	
 	balance: {
 		type: mongoose.Decimal128,
         required: false,
