@@ -19,7 +19,7 @@ var mongoose = require('mongoose');
 // Connecting to the database
 
 const connect = async function () {
-  const uri = 'mongodb://konektron01:Konektron10106088@mongodb.konektron.kinghost.net/konektron01?retryWrites=true&w=majority'; // Will return DB URI 
+  const uri = 'mongodb://konektron01:Konektron10106088@mongodb.konektron.kinghost.net/konektron01?retryWrites=true&w=majority'; // Will return DB URI
   console.log(`Connecting to DB - uri: ${uri}`);
   return mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 };
@@ -29,8 +29,6 @@ connect().then(() => {
 }).catch((e) => {
   console.log('handle error here: ', e.message)
 })
-// Starting the Database
-
 require('./models/UsersModel');
 // Starting the Database
 
