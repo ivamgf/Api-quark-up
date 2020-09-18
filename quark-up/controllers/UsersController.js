@@ -19,56 +19,51 @@ module.exports = {
     
 	async index(req, res) {
 		const { page = 1 } = req.query;
-	const queryUsers = await Users.paginate({}, { page, limit: 10 });
+	const info = await Users.paginate({}, { page, limit: 10 });
 
-	return res.json(queryUsers);
+	return res.json(info);
     },
 
     // CRUD
-/*
     // Get Function
     async show(req, res) {
         // Consulta
-        const users = await Users.findById(req.body);
-
-        return res.json(users);
-    },
-*/
-/*    
-    // Get Function
-    async show(req, res) {
-        // Consulta
-        const queryUsers = await Users.findById(req.params.id);
+        const queryUsers = await Users.find();
 
         return res.json(queryUsers);
     },
-*/   
-/*
-    // Post Function
-    async store(req,res) {
-        // Registro
-        const users = await Users.create(req.body);
+   
+    // Get Function
+    async showUser(req, res) {
+        // Consulta
+        const queryUser = await Users.findById(req.params.id);
 
-        return res.json(users);
+        return res.json(queryUser);
     },
-*/
-/*
+
+    // Post Function
+    async registerUser(req,res) {
+        // Registro
+        const regUsers = await Users.create(req.body);
+
+        return res.json(regUsers);
+    },
+
     // Put Function
-    async update(req,res) {
+    async updateUser(req,res) {
         // Update
-        const users = await Users.findByIdAndUpdate(req.params.id, req.body,
+        const upUsers = await Users.findByIdAndUpdate(req.params.id, req.body,
     { new: true });
 
-        return res.json(Users);
+        return res.json(upUsers);
     },
-*/
-/*
+
     // Delete Function
-    async destroy(req,res) {
+    async destroyUser(req,res) {
         // Delete
-        await Users.findByIdAndRemove(req.params.id);
+        await deleteUsers.findByIdAndRemove(req.params.id);
 
         return res.send();
     }
-*/
+
 };
