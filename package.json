@@ -1,0 +1,30 @@
+{
+  "name": "api-quark-up",
+  "version": "1.0.0",
+  "description": "api quark up project version 1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivamgf/Api-quark-up.git"
+  },
+  "keywords": [
+    "api",
+    "quark",
+    "up",
+    "test",
+    "model"
+  ],
+  "author": "ivam galvao filho",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ivamgf/Api-quark-up/issues"
+  },
+  "homepage": "https://github.com/ivamgf/Api-quark-up#readme"
+}
