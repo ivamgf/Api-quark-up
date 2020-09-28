@@ -13,8 +13,18 @@ var http = require('http');
  */
 
 var watch = require('node-watch');
-var hostname = '127.0.0.1';
-var port = normalizePort(process.env.PORT || '3000');
+
+// Host development
+// var hostname = '127.0.0.1';
+
+// Host Production
+var hostname = 'konektron.kinghost.net';
+// Port Development
+// var port = normalizePort(process.env.PORT || '3000');
+
+// Port Production
+var port = normalizePort(process.env.PORT || '21204');
+
 const open = require('open');
 app.set('port', port);
 
